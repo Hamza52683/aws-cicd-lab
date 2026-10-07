@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+
+  install:
+    commands:
+      - pip install -r requirements.txt
+
+  build:
+    commands:
+      - echo Building Docker image
+      - docker build -t aws-cicd-lab .
+
+  post_build:
+    commands:
+      - echo Build completed successfully
